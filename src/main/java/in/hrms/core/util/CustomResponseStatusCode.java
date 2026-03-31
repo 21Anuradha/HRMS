@@ -56,5 +56,6 @@ public class CustomResponseStatusCode {
     public static final int NOT_ELIGIBLE = 3002;
     public static final int ELIGIBLE = 3003;
     public static final int CONTENT_MISMATCH = 5002;
+    
 
 }
