@@ -1,0 +1,107 @@
+server:
+  port: 5003
+  servlet:
+    context-path: /core-service/
+
+app:
+  host: localhost
+  protocol: http
+  base-url: ${app.protocol}://${app.host}
+  custom-base-url: /prod/hrms/web
+  show-otp: false
+  name: HRMS
+
+allowed:
+  origins: ${app.base-url},https://myemerald.in,
+
+expense-service:
+  url: ${app.base-url}:5001/expense-service
+
+communication-service:
+  base-url: ${app.base-url}:5005/communication-service
+
+file:
+  upload:
+    path: C:/DOCUMENTS/HRMS
+    profile-image-path: C:/DOCUMENTS/HRMS/PROFILE_IMAGE
+    broadcast-image-path: C:/DOCUMENTS/HRMS/BROADCAST_IMAGE
+
+spring:
+  application:
+    name: CORE-SERVICE
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/prod_hrms_core_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+      hibernate.current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+  defer-datasource-initialization: false
+  sql:
+    init:
+      mode: never
+  output:
+    ansi:
+      enabled: always
+  mvc:
+    enabled: true
+  web:
+    servlet:
+      mvc:
+        method-annotation:
+          enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    url: http://localhost:5001/core-service/v3/api-docs
+  show-actuator: true
+  paths-to-match: /auth/**, /config/**, /index/**, /modules/**, /role/**, /users/**, /**
+  packages-to-scan: com.em.core.controller
+
+logging:
+  level:
+    com.em.core: TRACE
+    #file:
+    #name: expense.log
+
+document:
+  base-url: ${app.base-url}:5001/core-service/index/document/
+  image-url: ${app.base-url}:5001/core-service/index/profile/
+  broadcast-url: ${app.base-url}:5001/core-service/index/broadcast/
+
+core-service:
+  base-url: ${app.base-url}:9003/api/core-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+  instance:
+    hostname: ${HOSTNAME:localhost}
+
+jwt:
+  secret: afafasfafafasfasfasfafacasdasfasxASFACASDFACASDFASFASFDAFASFASDAADSCSDFADCVSGCFVADXCcadwavfsfarvf

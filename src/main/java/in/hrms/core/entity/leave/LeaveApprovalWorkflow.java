@@ -1,0 +1,47 @@
+package in.hrms.core.entity.leave;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(
+        name = "leave_approval_workflow",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"leave_type_id", "approval_level"})
+)
+public class LeaveApprovalWorkflow {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "leave_type_id", nullable = false)
+    private LeaveType leaveType;
+
+    @Column(name = "no_of_days")
+    private int noOfDays;
+
+    @Column(name = "approval_level", nullable = false)
+    private int approvalLevel;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(name = "approval_type")
+    private LeaveApprovalTypeEnum approvalType;
+
+    private String description;
+
+    @Column(name = "is_active", columnDefinition = "TINYINT(1) DEFAULT 1")
+    private boolean isActive;
+}

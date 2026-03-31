@@ -8,6 +8,7 @@ public class HrmsCoreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HrmsCoreApplication.class, args);
+		System.out.println("Started HRMS Core Application .............");
 	}
 
 }
