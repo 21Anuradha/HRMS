@@ -5,7 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import in.hrms.core.entity.payroll.enums.EmpSalaryCompCalculationType;
+import in.hrms.core.enums.EmpSalaryCompCalculationType;
 
 import java.util.Date;
 

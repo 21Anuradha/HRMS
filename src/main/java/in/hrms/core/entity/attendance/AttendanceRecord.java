@@ -13,6 +13,10 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import in.hrms.core.entity.employee.Employees;
 import in.hrms.core.entity.shift.ShiftRoster;
+import in.hrms.core.enums.AttendanceCurrentStatusEnum;
+import in.hrms.core.enums.AttendancePresenceStatusEnum;
+import in.hrms.core.enums.AttendanceRemark;
+import in.hrms.core.enums.AttendanceSource;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -10,6 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import in.hrms.core.entity.employee.Employees;
+import in.hrms.core.enums.CompOffStatus;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

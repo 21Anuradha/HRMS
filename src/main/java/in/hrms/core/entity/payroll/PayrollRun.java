@@ -10,7 +10,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import in.hrms.core.entity.payroll.enums.PayrollRunStatus;
+import in.hrms.core.enums.PayrollRunStatus;
 
 import java.time.LocalDate;
 import java.util.Date;
