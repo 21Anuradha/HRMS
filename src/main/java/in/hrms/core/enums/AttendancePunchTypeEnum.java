@@ -1,4 +1,4 @@
-package in.hrms.core.entity.attendance;
+package in.hrms.core.enums;
 
 public enum AttendancePunchTypeEnum {
     CHECK_IN,      // First entry into workplace

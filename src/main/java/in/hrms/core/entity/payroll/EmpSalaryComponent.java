@@ -11,8 +11,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import in.hrms.core.entity.payroll.enums.EmpSalaryComponentType;
-import in.hrms.core.entity.payroll.enums.EmpStatutoryType;
+import in.hrms.core.enums.EmpSalaryComponentType;
+import in.hrms.core.enums.EmpStatutoryType;
 
 import java.util.Date;
 

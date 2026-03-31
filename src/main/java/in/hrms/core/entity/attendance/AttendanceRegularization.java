@@ -12,6 +12,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import in.hrms.core.entity.employee.Employees;
 import in.hrms.core.entity.shift.Shifts;
+import in.hrms.core.enums.AttendanceRegularizationStatus;
 
 import java.time.LocalDateTime;
 import java.util.Date;

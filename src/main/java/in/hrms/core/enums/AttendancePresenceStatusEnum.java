@@ -1,4 +1,4 @@
-package in.hrms.core.entity.attendance;
+package in.hrms.core.enums;
 
 public enum AttendancePresenceStatusEnum {
     PRESENT,       // Worked full/required hours

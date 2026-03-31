@@ -13,7 +13,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import in.hrms.core.entity.employee.Employees;
-import in.hrms.core.entity.payroll.enums.PayrollEmployeeStatus;
+import in.hrms.core.enums.PayrollEmployeeStatus;
 
 import java.util.Date;
 import java.util.List;

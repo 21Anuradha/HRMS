@@ -1,4 +1,4 @@
-package in.hrms.core.entity.leave;
+package in.hrms.core.enums;
 
 public enum CompOffStatus {
     PENDING,

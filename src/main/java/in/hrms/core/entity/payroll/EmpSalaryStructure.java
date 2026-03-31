@@ -13,7 +13,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import in.hrms.core.entity.configuration.Currency;
 import in.hrms.core.entity.employee.Employees;
-import in.hrms.core.entity.payroll.enums.EmpSalaryStructureStatus;
+import in.hrms.core.enums.EmpSalaryStructureStatus;
 
 import java.util.Date;
 import java.util.List;

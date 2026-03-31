@@ -1,4 +1,4 @@
-package in.hrms.core.entity.payroll.enums;
+package in.hrms.core.enums;
 
 public enum EmpSalaryStructureStatus {
     ACTIVE, INACTIVE, REVISED
